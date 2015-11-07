@@ -12,7 +12,7 @@ expectedJson = open("f.json").read()
 expectedJson_change = open("f_change.json").read()
 
 
-class StandAloneTests(TestCase):1
+class StandAloneTests(TestCase):
     """Test the stand-alone module functions."""
     @patch('__builtin__.open')
     def test_aapl(self, mock_open):
