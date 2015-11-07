@@ -6,6 +6,9 @@ import urllib
 from bs4 import BeautifulSoup
 import string
 
+def add(a, b):
+    return a + b
+
 def mycomp(a, b):
     x = str(a[7].text)
     y = str(b[7].text)
