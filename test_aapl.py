@@ -10,7 +10,7 @@ computedJson = project.yahoo_options_data.contractAsJson("aapl.dat")
 expectedJson = open("aapl.json").read()
 expectedJson_change = open("aapl_change.json").read()
 
-'''
+
 class StandAloneTests(TestCase):
     """Test the stand-alone module functions."""
     @patch('__builtin__.open')
@@ -21,7 +21,7 @@ class StandAloneTests(TestCase):
         self.assertTrue(
 		json.loads(computedJson) == json.loads(expectedJson) or json.loads(computedJson) == json.loads(expectedJson_change)
 		)
-'''
+
 if json.loads(computedJson) != json.loads(expectedJson) and json.loads(computedJson) != json.loads(expectedJson_change):
   print "Test failed!"
   print "Expected output:", expectedJson
